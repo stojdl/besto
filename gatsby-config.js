@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Junior web developer`,
+    description: `Toto je moje referenční stránka. Hledám stáž/brigádu/práci na pozici junior web developera.`,
+    author: `Bedřich Štojdl`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,8 +27,18 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: `476c138948b844053adb72e849833b`,
+        environment: `main`,
+        previewMode: false,
+        disableLiveReload: false,
+        localeFallbacks: {
+          it: ["en"],
+        },
+      },
+    },
     // `gatsby-plugin-offline`,
   ],
 }
