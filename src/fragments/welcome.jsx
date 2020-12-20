@@ -24,7 +24,7 @@ const Content = styled.div`
   justify-content: center;
   min-height: calc(100% - 128px);
   padding-left: 5vw;
-    padding-right: 5vw;
+  padding-right: 5vw;
   ${Breakpoints.sm} {
     flex-direction: column;
   }

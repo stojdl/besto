@@ -14,8 +14,8 @@ const Wrapper = styled.section`
 `
 
 const Content = styled.div`
-width: 100%;
-    padding-left: 5vw;
+  width: 100%;
+  padding-left: 5vw;
   padding-right: 5vw;
 `
 
@@ -26,10 +26,10 @@ const Footer = () => {
         publicURL
       }
       site {
-      siteMetadata {
-        author
+        siteMetadata {
+          author
+        }
       }
-    }
     }
   `)
   return (
@@ -40,12 +40,13 @@ const Footer = () => {
         height="90vh"
       />
       <Content>
-<Text text="Vytvořeno v Reactu framewrokem GatSby, navrhnuto ve Figmě,
+        <Text
+          text="Vytvořeno v Reactu framewrokem Gatsby, navrhnuto ve Figmě,
         implementováno přes Styled components, obsah je spravován na DatoCMS a
-        stránka je hostovaná přes Netlify." />
-      <Text text={`© ${data.site.siteMetadata.author}`} />
+        stránka je hostovaná přes Netlify."
+        />
+        <Text text={`© ${data.site.siteMetadata.author}`} />
       </Content>
-      
     </Wrapper>
   )
 }

@@ -6,13 +6,15 @@ import Welcome from "../fragments/welcome"
 import About from "../fragments/about"
 import Contact from "../fragments/contact"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Moje portfolio" />
-    <Welcome />
-    <About />
-    <Contact />
-  </Layout>
-)
+const IndexPage = () => {
+  return (
+    <Layout>
+      <SEO title="Moje portfolio" />
+      <Welcome />
+      <About />
+      <Contact />
+    </Layout>
+  )
+}
 
 export default IndexPage

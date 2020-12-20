@@ -10,6 +10,7 @@ const H1 = styled.h1`
   line-height: 56px;
   color: #dfeaff;
   margin-bottom: 32px;
+  text-align: center;
 
   ${Breakpoints.md} {
     font-size: 42px;

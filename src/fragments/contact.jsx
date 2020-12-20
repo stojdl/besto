@@ -48,7 +48,7 @@ const Contact = () => {
     }
   `)
   return (
-    <Wrapper>
+    <Wrapper id="contact">
       <Bg backgroundURL={data.bg2.publicURL} topPosition="-47vh" />
       <Content>
         <Title text={data.contact.title} />
