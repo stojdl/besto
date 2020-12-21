@@ -9,10 +9,12 @@ import Back from "../components/back"
 import Title from "../components/title"
 import Text from "../components/text"
 import Bg from "../components/bg"
+import Breakpoints from "../utils/breakpoints"
 
 const Wrapper = styled.section`
   min-height: 225vh;
   padding: 2.5rem;
+
 `
 const Content = styled.div`
   width: 100%;
@@ -32,8 +34,31 @@ const Image = styled.img``
 
 const TextArea = styled.div`
   width: 100%;
-  padding: 5%;
+  padding-left: 5%;
+    padding-right: 5%;
   margin-bottom: 40vh;
+
+   h3 {
+    font-family: "Quicksand";
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 40px;
+    color: #dfeaff;
+
+    ${Breakpoints.md} {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `
 
 export const query = graphql`

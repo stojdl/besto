@@ -60,6 +60,7 @@ const CardImage = styled.img`
   width: 100%;
   height: 40%;
   object-fit: cover;
+  object-position: 0 0;
 `
 const CardText = styled.div`
   max-height: 30%;
@@ -91,6 +92,9 @@ const Blog = () => {
       bg: file(relativePath: { eq: "bgBlog.svg" }) {
         publicURL
       }
+      placeholder: file(relativePath: { eq: "cardPlaceholder.png" }) {
+        publicURL
+      }
       allDatoCmsBlog(filter: { locale: { eq: "en" } }) {
         edges {
           node {
@@ -110,7 +114,7 @@ const Blog = () => {
   `)
 
   const karty = data.allDatoCmsBlog.edges.map(article => {
-    let url = ""
+    let url = data.placeholder.publicURL;
     if (article.node.image != null) {
       url = article.node.image.url
     }
