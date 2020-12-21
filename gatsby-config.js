@@ -38,7 +38,7 @@ module.exports = {
           it: ["en"],
         },
       },
-    },
+    }, 
     `gatsby-plugin-styled-components`,
     // `gatsby-plugin-offline`,
   ],
