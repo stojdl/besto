@@ -5,8 +5,8 @@ import styled from "styled-components"
 
 const GoBack = styled.div`
   position: relative;
-  top: -64px;
-  left: 64px;
+  top: 64px;
+  left: 5%;
   display: inline-block;
 `
 
@@ -19,8 +19,9 @@ const BackLink = styled(Link)`
   background-repeat: no-repeat;
   background-position: left;
   padding-left: 32px;
+  transition: box-shadow 0.15s ease-in-out;
   &:hover {
-    text-shadow: 0px 3px 20px rgba(223, 234, 255, 0.3);
+    text-shadow: 0px 3px 20px rgba(223, 234, 255, 0.5);
   }
 `
 
