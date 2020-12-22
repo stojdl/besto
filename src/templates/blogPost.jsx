@@ -36,7 +36,9 @@ const ImageWrapper = styled.div`
   border-radius: 10px;
 `
 
-const Image = styled.img``
+const Image = styled.div`
+  padding: 0.5%;
+`
 
 const TextArea = styled.div`
   width: 100%;
@@ -120,7 +122,7 @@ const BlogPost = props => {
         <Title text={props.data.datoCmsBlog.title} />
         <Content>
           <ImageWrapper>
-            <Image src={url}></Image>
+            <Image><img src={url} /></Image> 
           </ImageWrapper>
           <TextArea>
             <Text text={props.data.datoCmsBlog.content} textAlign="justify" />

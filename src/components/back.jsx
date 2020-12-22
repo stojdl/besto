@@ -2,12 +2,16 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
+import Breakpoints from "../utils/breakpoints"
 
 const GoBack = styled.div`
   position: relative;
   top: 64px;
   left: 5%;
   display: inline-block;
+   ${Breakpoints.sm} {
+    top: -16px; 
+  }
 `
 
 const BackLink = styled(Link)`
