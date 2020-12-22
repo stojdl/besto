@@ -38,7 +38,7 @@ module.exports = {
           it: ["en"],
         },
       },
-    }, 
+    },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {

@@ -14,7 +14,6 @@ import Breakpoints from "../utils/breakpoints"
 const Wrapper = styled.section`
   min-height: 225vh;
   padding: 2.5rem;
-
 `
 const Content = styled.div`
   width: 100%;
@@ -25,9 +24,15 @@ const ImageWrapper = styled.div`
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2.4rem;
   display: flex;
   justify-content: center;
-  background: linear-gradient(180deg, #090c15 0%, rgba(223, 234, 255, 0) 100%);
+  background: linear-gradient(180deg, #090c15 0%, #13192b 49.38%, #090c15 100%);
+  /* border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; */
+  border-radius: 10px;
 `
 
 const Image = styled.img``
@@ -35,10 +40,10 @@ const Image = styled.img``
 const TextArea = styled.div`
   width: 100%;
   padding-left: 5%;
-    padding-right: 5%;
+  padding-right: 5%;
   margin-bottom: 40vh;
 
-   h3 {
+  h3 {
     font-family: "Quicksand";
     font-size: 30px;
     font-weight: normal;
@@ -77,11 +82,14 @@ export const query = graphql`
     bg: file(relativePath: { eq: "bgBlog.svg" }) {
       publicURL
     }
+    placeholder: file(relativePath: { eq: "cardPlaceholder.png" }) {
+      publicURL
+    }
   }
 `
 
 const BlogPost = props => {
-  let url = ""
+  let url = props.data.placeholder.publicURL
   if (props.data.datoCmsBlog.image != null) {
     url = props.data.datoCmsBlog.image.url
   }

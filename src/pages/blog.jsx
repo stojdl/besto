@@ -60,7 +60,7 @@ const CardImage = styled.img`
   width: 100%;
   height: 40%;
   object-fit: cover;
-  object-position: 0 0;
+
 `
 const CardText = styled.div`
   max-height: 30%;
@@ -114,7 +114,7 @@ const Blog = () => {
   `)
 
   const karty = data.allDatoCmsBlog.edges.map(article => {
-    let url = data.placeholder.publicURL;
+    let url = data.placeholder.publicURL
     if (article.node.image != null) {
       url = article.node.image.url
     }

@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Title from "../components/title"
 import Text from "../components/text"
@@ -31,6 +31,15 @@ const Info = styled.span`
     width: 70%;
     flex-direction: column;
   }
+
+  a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `
 
 const Contact = () => {
@@ -55,7 +64,9 @@ const Contact = () => {
         <Text text={data.contact.text} />
         <Info>
           <Text text={`E-mail:&nbsp;&nbsp;&nbsp;${data.contact.email}`} />
-          <Text text={`Github:&nbsp;&nbsp;&nbsp;${data.contact.github}`} />
+          <Text
+            text={`Github:&nbsp;&nbsp;&nbsp;<a href="https://github.com/stojdl" target="_blank">${data.contact.github}</a>`}
+          />
         </Info>
       </Content>
     </Wrapper>

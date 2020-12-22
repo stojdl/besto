@@ -67,7 +67,10 @@ const Welcome = () => {
         <Info>
           <Title text={data.welcome.title} />
           <Text text={data.welcome.subtitle} />
-          <LinkButton link="/#" text={data.welcome.button} />
+          <LinkButton
+            link="/blog/moje-(ne)zkusenosti"
+            text={data.welcome.button}
+          />
         </Info>
       </Content>
     </Wrapper>
