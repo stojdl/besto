@@ -18,6 +18,7 @@ const Wrapper = styled.section`
 const Content = styled.div`
   width: 100%;
   margin-top: 5rem;
+    margin-bottom: 40vh;
 `
 
 const ImageWrapper = styled.div`
@@ -41,7 +42,7 @@ const TextArea = styled.div`
   width: 100%;
   padding-left: 5%;
   padding-right: 5%;
-  margin-bottom: 40vh;
+  margin-bottom: 5rem;
 
   h3 {
     font-family: "Quicksand";
@@ -66,11 +67,21 @@ const TextArea = styled.div`
   }
 `
 
+const Info = styled.div`
+  width: 90%;
+  height: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.7rem;
+  border-top: 1px groove #dfeaff;
+`
+
 export const query = graphql`
   query($slug: String!) {
     datoCmsBlog(slug: { eq: $slug }, locale: { eq: "en" }) {
       meta {
         createdAt
+        publishedAt
       }
       title
       content
@@ -114,6 +125,10 @@ const BlogPost = props => {
           <TextArea>
             <Text text={props.data.datoCmsBlog.content} textAlign="justify" />
           </TextArea>
+          <Info>
+<Text text={`<i>aktualizováno:</i>&nbsp;&nbsp;${new Intl.DateTimeFormat("cs-CZ").format(publishedAt)},&nbsp;&nbsp;&nbsp;<i>vytvořeno:</i>&nbsp;&nbsp;${new Intl.DateTimeFormat("cs-CZ").format(createdAt)}`} textAlign="right" />
+          </Info>
+            
         </Content>
       </Wrapper>
     </Layout>

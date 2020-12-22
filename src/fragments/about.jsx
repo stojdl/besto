@@ -5,7 +5,7 @@ import Bg from "../components/bg"
 import Image from "../components/image"
 import Title from "../components/title"
 import Text from "../components/text"
-import LinkButton from "../components/button"
+// import LinkButton from "../components/button"
 
 import Breakpoints from "../utils/breakpoints"
 
@@ -72,7 +72,7 @@ const About = () => {
           <Info>
             <Title text={data.about.title} />
             <Text text={data.about.text} textAlign="justify" />
-            <LinkButton link="/#" text={data.about.button} />
+            {/* <LinkButton link="/#" text={data.about.button} /> */}
           </Info>
           <Image fluid={data.me.childImageSharp.fluid} />
         </Content>
