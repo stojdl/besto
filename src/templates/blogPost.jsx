@@ -122,7 +122,7 @@ const BlogPost = props => {
         <Title text={props.data.datoCmsBlog.title} />
         <Content>
           <ImageWrapper>
-            <Image><img src={url} /></Image> 
+            <Image><img src={url} alt="420" /></Image> 
           </ImageWrapper>
           <TextArea>
             <Text text={props.data.datoCmsBlog.content} textAlign="justify" />
