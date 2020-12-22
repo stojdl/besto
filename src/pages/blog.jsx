@@ -74,6 +74,8 @@ const CardDate = styled.div`
 
 const CardLink = styled(Link)`
   width: 30%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 3rem;
   text-decoration: none;
 

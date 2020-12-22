@@ -21,6 +21,10 @@ const Content = styled.div`
   color: #dfeaff;
   padding-top: 23vh;
   padding-bottom: 30vh;
+   ${Breakpoints.sm} {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 `
 
 const Info = styled.span`

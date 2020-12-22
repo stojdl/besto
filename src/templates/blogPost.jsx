@@ -128,7 +128,8 @@ const BlogPost = props => {
             <Text text={props.data.datoCmsBlog.content} textAlign="justify" />
           </TextArea>
           <Info>
-<Text text={`<i>aktualizováno:</i>&nbsp;&nbsp;${new Intl.DateTimeFormat("cs-CZ").format(publishedAt)},&nbsp;&nbsp;&nbsp;<i>vytvořeno:</i>&nbsp;&nbsp;${new Intl.DateTimeFormat("cs-CZ").format(createdAt)}`} textAlign="right" />
+<Text text={`<i>aktualizováno:</i>&nbsp;&nbsp;${new Intl.DateTimeFormat("cs-CZ").format(publishedAt)}`} textAlign="right" />
+<Text text={`<i>vytvořeno:</i>&nbsp;&nbsp;${new Intl.DateTimeFormat("cs-CZ").format(createdAt)}`} textAlign="right" />
           </Info>
             
         </Content>
